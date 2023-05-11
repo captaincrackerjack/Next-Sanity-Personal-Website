@@ -1,15 +1,15 @@
 # dependencies
-/node_modules
+node_modules
 
 # testing
-/coverage
+coverage
 
 # next.js build artifacts
-/.next/
-/out/
+.next
+out
 
 # production
-/build
+build
 
 # misc
 .DS_Store
@@ -31,6 +31,6 @@ yarn-error.log*
 next-env.d.ts
 
 # previously added items
-public/
+public
 README.md
 package-lock.json
