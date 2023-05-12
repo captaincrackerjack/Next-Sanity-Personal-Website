@@ -35,11 +35,12 @@ export async function getProject(slug: string): Promise<Project> {
 
 export async function getPages(): Promise<Page[]> {
   return createClient(clientConfig).fetch(
-    groq`*[_type == "page"]{
+    groq`*[_type == "page"] | order(order asc){
       _id,
       _createdAt,
       title,
       "slug": slug.current,
+      order
     }`
   );
 }

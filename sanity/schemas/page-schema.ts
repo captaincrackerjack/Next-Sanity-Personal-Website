@@ -23,6 +23,11 @@ const page = {
       type: "array",
       of: [{ type: "block" }],
     },
+    {
+      name: "order",
+      title: "Order",
+      type: "number",
+    },
   ],
 };
 
