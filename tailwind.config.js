@@ -10,13 +10,7 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        "main-bg": "#2B2B2B",
-        "secondary-bg": "#757575",
-        "primary-text": "#FFFFFF",
-        "secondary-text": "#BDBDBD",
-        accent: "#B39DDB",
-      },
+      colors: {},
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
