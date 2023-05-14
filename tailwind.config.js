@@ -10,7 +10,12 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {},
+      colors: {
+        primary: "#659DBD", // primary color
+        secondary: "#2D6A88", // secondary color
+        accent: "#CAF7FF", // accent color
+        extra: "#753500", // extra color
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

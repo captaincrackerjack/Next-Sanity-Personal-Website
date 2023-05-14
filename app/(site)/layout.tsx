@@ -17,8 +17,8 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className="max-w-3xl mx-auto py-10">
-        <header className="flex items-center justify-between">
+      <body className="bg-minimalist max-w mx-auto py-10">
+        <header className="flex justify-between items-center px-4 sm:px-6 lg:px-8">
           <Link
             href="/"
             className="bg-gradient-to-r via-red-500 from-orange-400 to-purple-600 bg-clip-text text-transparent text-lg font-bold"
@@ -38,7 +38,9 @@ export default async function RootLayout({
             ))}
           </div>
         </header>
-        <main className="py-20">{children}</main>
+        <main className="py-20 px-4 sm:px-6 lg:px-8 text-center">
+          {children}
+        </main>
       </body>
     </html>
   );
