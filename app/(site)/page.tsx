@@ -19,7 +19,6 @@ export default async function Home() {
         I&apos;m an ever curious, life-long learner, and independent software
         developer.
       </p>
-
       <p className="mt-auto mb-1 text-xl text-gray-600 text-center">
         📍 Houston, TX.
       </p>
