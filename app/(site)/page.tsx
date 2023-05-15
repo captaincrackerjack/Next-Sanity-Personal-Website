@@ -1,6 +1,7 @@
 import { getProjects } from "@/sanity/sanity-utils";
 import Image from "next/image";
 import Link from "next/link";
+import loadable from "@loadable/component";
 
 export default async function Home() {
   const projects = await getProjects();
@@ -15,8 +16,8 @@ export default async function Home() {
         !
       </h1>
 
-      <p className="text-xl text-gray-600 text-center">
-        I&apos;m an ever curious, life-long learner, and independent software
+      <p className="text-xl text-gray-400 text-center">
+        I&apos;m an ever-curious, life-long learner, and independent software
         developer.
       </p>
       <p className="mt-auto mb-1 text-xl text-gray-600 text-center">

@@ -1,6 +1,7 @@
 import { getPages } from "@/sanity/sanity-utils";
 import "../globals.css";
 import Link from "next/link";
+import { RippleBackground } from "./RippleBackground";
 
 export const metadata = {
   title: "My Awesome Site",
@@ -18,6 +19,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className="bg-minimalist max-w mx-auto py-10">
+        <RippleBackground />
         <header className="flex justify-between items-center px-4 sm:px-6 lg:px-8">
           <Link
             href="/"
