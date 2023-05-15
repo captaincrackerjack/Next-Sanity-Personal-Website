@@ -28,7 +28,7 @@ export default async function RootLayout({
             Grant
           </Link>
 
-          <div className="flex items-center gap-5 text-sm text-gray-600">
+          <div className="flex items-center gap-5 text-sm text-gray-400">
             {pages.map((page) => (
               <Link
                 key={page._id}

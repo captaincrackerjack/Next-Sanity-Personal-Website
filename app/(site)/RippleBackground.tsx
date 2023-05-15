@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import Sketch from "react-p5";
 import p5Types from "p5";
 
@@ -23,6 +23,7 @@ export const RippleBackground = () => {
         particles.push(newParticle(i, j, p5));
       }
     }
+    simulateMousePress(p5); // Call the function when the page loads
   };
 
   const draw = (p5: p5Types) => {
@@ -34,14 +35,35 @@ export const RippleBackground = () => {
   };
 
   const mousePressed = (p5: p5Types) => {
+    applyForceToParticles(p5.mouseX, p5.mouseY, p5);
+  };
+
+  const simulateMousePress = (p5: p5Types) => {
+    const centerX = p5.windowWidth / 2;
+    const centerY = p5.windowHeight / 2;
+    const numClicks = getRandomEvenNumber(2, 8);
+    const delay = getRandomNumber(100, 300);
+
+    for (let i = 0; i < numClicks; i++) {
+      setTimeout(() => applyForceToParticles(centerX, centerY, p5), i * delay);
+    }
+  };
+
+  const getRandomEvenNumber = (min: number, max: number) => {
+    let num = Math.floor(Math.random() * (max - min + 1)) + min;
+    return num % 2 === 0 ? num : num + 1;
+  };
+
+  const getRandomNumber = (min: number, max: number) => {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  };
+
+  const applyForceToParticles = (x: number, y: number, p5: p5Types) => {
     for (let particle of particles) {
-      let d = p5.dist(p5.mouseX, p5.mouseY, particle.pos.x, particle.pos.y);
-      let force = p5.createVector(
-        p5.mouseX - particle.pos.x,
-        p5.mouseY - particle.pos.y
-      );
+      let d = p5.dist(x, y, particle.pos.x, particle.pos.y);
+      let force = p5.createVector(x - particle.pos.x, y - particle.pos.y);
       force.div(d);
-      force.mult(50);
+      force.mult(10);
       particle.applyForce(force);
     }
   };
