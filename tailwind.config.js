@@ -16,6 +16,9 @@ module.exports = {
         accent: "#CAF7FF", // accent color
         extra: "#753500", // extra color
       },
+      animation: {
+        spin: "spin .33s linear infinite",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

@@ -41,8 +41,8 @@ export const RippleBackground = () => {
   const simulateMousePress = (p5: p5Types) => {
     const centerX = p5.windowWidth / 2;
     const centerY = p5.windowHeight / 2;
-    const numClicks = getRandomEvenNumber(2, 8);
-    const delay = getRandomNumber(100, 300);
+    const numClicks = getRandomEvenNumber(6, 8);
+    const delay = getRandomNumber(150, 300);
 
     for (let i = 0; i < numClicks; i++) {
       setTimeout(() => applyForceToParticles(centerX, centerY, p5), i * delay);
@@ -85,7 +85,7 @@ export const RippleBackground = () => {
     };
 
     const show = (p5: p5Types) => {
-      p5.fill(255, 255, 255, 100); // The last parameter is the alpha value (0-255). Lower values make the color more transparent.
+      p5.fill(255, 255, 255, 125); // The last parameter is the alpha value (0-255). Lower values make the color more transparent.
       p5.noStroke();
       p5.ellipse(pos.x, pos.y, 2);
     };

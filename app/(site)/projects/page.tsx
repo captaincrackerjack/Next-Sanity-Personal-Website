@@ -8,7 +8,7 @@ export default async function Home() {
 
   return (
     <div>
-      <h1 className="text-4xl drop-shadow font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-gray-200 hover:from-pink-500 hover:to-orange-500 transition-all duration-500 ease-in-out transform hover:scale-110">
+      <h1 className="inline-block text-4xl drop-shadow font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-gray-200 hover:from-pink-500 hover:to-orange-500 transition-all duration-500 ease-in-out transform hover:scale-110">
         {page.title}
       </h1>
       <div className="mt-20 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
