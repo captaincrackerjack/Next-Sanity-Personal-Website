@@ -1,8 +1,8 @@
 import { getPages } from "@/sanity/sanity-utils";
 import "../globals.css";
 import Link from "next/link";
-import { RippleBackground } from "./RippleBackground";
-import HomeLink from "./HomePageSpin";
+import { RippleBackground } from "./animations/RippleBackground";
+import HomeLink from "./animations/HomePageSpin";
 
 export const metadata = {
   title: "Grant",

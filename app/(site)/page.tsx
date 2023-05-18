@@ -8,7 +8,7 @@ export default async function Home() {
 
   return (
     <div className="flex flex-col items-center min-h-screen">
-      <h1 className="text-gray-300 text-7xl font-extrabold text-center py-6">
+      <h1 className="text-gray-300 text-7xl font-extrabold text-center py-8 animated-text">
         Hello, I&apos;m{" "}
         <span className="bg-gradient-to-r via-red-500 from-orange-400 to-purple-600 bg-clip-text text-transparent">
           Grant
@@ -16,7 +16,7 @@ export default async function Home() {
         !
       </h1>
 
-      <div className="rounded-full mt-2">
+      <div className="rounded-full mt-2 animated-text">
         <div className="bg-white rounded-full overflow-hidden relative w-64 h-64">
           <Image
             src="/images/linkedin.jpg"
@@ -28,11 +28,13 @@ export default async function Home() {
         </div>
       </div>
 
-      <p className="text-xl text-gray-400 text-center mt-8">
+      <p className="text-xl text-gray-400 text-center mt-8 animated-text">
         I&apos;m an ever-curious, life-long learner, and independent software
         developer.
       </p>
-      <p className="mt-4 text-xl text-gray-500 text-center">📍 Houston, TX.</p>
+      <p className="mt-4 text-xl text-gray-500 text-center animated-text">
+        📍 Houston, TX.
+      </p>
     </div>
   );
 }
