@@ -1,3 +1,6 @@
+// the page schema controls the pages of the website that do not have their own dedicated folder (e.i., "skills, contact, etc")
+// it also manages the items in the navigation bar, including their order
+
 const page = {
   name: "page",
   title: "Pages",

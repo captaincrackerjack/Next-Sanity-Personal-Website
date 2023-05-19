@@ -3,6 +3,7 @@ import { createClient, groq } from "next-sanity";
 import clientConfig from "./config/client-config";
 import { Page } from "@/types/Page";
 import { BlogPost } from "@/types/BlogPost";
+import { About } from "@/types/About";
 
 export async function getProjects(): Promise<Project[]> {
   return createClient(clientConfig).fetch(
@@ -70,7 +71,6 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
   );
 }
 
-// in your sanity-utils.ts file
 export async function getBlogPost(slug: string): Promise<BlogPost> {
   return createClient(clientConfig).fetch(
     groq`*[_type == "blogPost" && slug.current == $slug][0]{
@@ -81,5 +81,18 @@ export async function getBlogPost(slug: string): Promise<BlogPost> {
       content
     }`,
     { slug }
+  );
+}
+
+export async function getAbout(): Promise<About> {
+  return createClient(clientConfig).fetch(
+    groq`*[ _type == "about" ][0]{
+          bio,
+          education,
+          professionalExperience,
+          interests,
+          funFacts,
+          "travelPhotos": travelPhotos[].asset->url
+      }`
   );
 }
